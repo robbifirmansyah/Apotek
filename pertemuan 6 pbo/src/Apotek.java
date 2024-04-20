@@ -67,11 +67,11 @@ public class Apotek {
     void lihatObat() {
         System.out.println("Daftar obat: ");
         System.out.println("-".repeat(40));
-        for (int i = 0; i < rakObat.length; i++) {
-            if (rakObat[i] != null) {
-                System.out.printf("Nama: %s | Harga: %d | Stok: %d\n", i, rakObat[i].getNama(), rakObat[i].getHarga(), rakObat[i].getStok());
+        for (Obat obat : rakObat) {
+            if (obat != null) {
+                System.out.printf("Nama: %s | Harga: %d | Stok: %d\n", obat.getNama(), obat.getHarga(), obat.getStok());
             } else {
-                System.out.printf("(kosong)\n", i);
+                System.out.printf("(kosong)\n");
             }
             System.out.println("-".repeat(40));
         }
